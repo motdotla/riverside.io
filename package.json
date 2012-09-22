@@ -1,0 +1,17 @@
+{
+  "name": "riverside.io",
+  "version": "0.0.1",
+  "author"  : "jacobscott",
+  "main"  : "app.coffee",
+  "engines" : {
+    "node"    : "0.6.18",
+    "npm"   :  "1.1.4"
+  },
+  "dependencies": {
+    "connect-assets"    : "latest",
+    "coffee-script"     : "latest",
+    "express"           : "3.0.0rc4",
+    "jade"              : "*",
+    "stylus"            : "latest"
+  }
+}
