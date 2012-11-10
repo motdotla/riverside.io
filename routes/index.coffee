@@ -4,4 +4,8 @@
 # 
 exports.index = (req, res) ->
   res.render "index",
-    title: "Express Yo"
+    title: "Riverside.io"
+
+exports.locations = (req, res) ->
+  res.render "locations",
+    title: "Locations"
