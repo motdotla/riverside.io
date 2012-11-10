@@ -4,6 +4,11 @@ border-radius(n)
   -moz-border-radius n
   border-radius n
 
+inset()
+  -moz-box-shadow:    0px 1px 1px 0px rgba(255,255,255,.8), inset 0px 1px 1px 0px rgba(0,0,0,.3)
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(255,255,255,.8), inset 0px 1px 1px 0px rgba(0,0,0,.3)
+  box-shadow:         0px 1px 1px 0px rgba(255,255,255,.8), inset 0px 1px 1px 0px rgba(0,0,0,.3)
+
 shadow(color)
   -moz-box-shadow:    0px 1px 1px 0px color
   -webkit-box-shadow: 0px 1px 1px 0px color
@@ -14,6 +19,14 @@ body
   font-family: "Open Sans"
   font-weight: 300
   background: #fff url(/images/patterns/subtle_dots.png)
+
+.btn-join-mailing
+  padding : 15px 20px;
+  font-size: 20px;
+  font-weight: 700;
+
+.well
+  inset()
 
 .center
   text-align: center
@@ -36,11 +49,21 @@ body
 #index
   text-align: left
   margin-bottom: 40px
-  .face
-    max-width: 120px
-    max-height: 120px
-    margin: 20px
-    shadow(#333)
+  .shadow
+    display: block;
+    position: relative;
+    max-width: 120px;
+    max-height: 120px;
+    margin: 20px auto;
+    //shadow(#333)
+    &:before
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      inset();
+      border-radius(50%);
+    
 
 .meetings
     background: #FFF url(/images/map-coffee-bean.jpg) no-repeat;
@@ -61,8 +84,8 @@ body
         width: 100%;
 
     .details
-      top: 0;
-      right: 0;
+      top: 1px;
+      right: 1px;
       padding: 20px;
       height : 377px;
       overflow: hidden;
@@ -92,10 +115,10 @@ body
           width: 28%
           margin: 0 2%;
           float: left;
-
-        .face
-          max-width: 100%;
+        .shadow
           margin: 10px 0;
+          .face
+            max-width: 100%;
 
 
   
