@@ -4,6 +4,11 @@ border-radius(n)
   -moz-border-radius n
   border-radius n
 
+inset()
+  -moz-box-shadow:    0px 1px 1px 0px rgba(255,255,255,.8), inset 0px 1px 1px 0px rgba(0,0,0,.3)
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(255,255,255,.8), inset 0px 1px 1px 0px rgba(0,0,0,.3)
+  box-shadow:         0px 1px 1px 0px rgba(255,255,255,.8), inset 0px 1px 1px 0px rgba(0,0,0,.3)
+
 shadow(color)
   -moz-box-shadow:    0px 1px 1px 0px color
   -webkit-box-shadow: 0px 1px 1px 0px color
@@ -15,6 +20,14 @@ body
   font-weight: 300
   background: #fff url(/images/patterns/subtle_dots.png)
 
+.btn-join-mailing
+  padding : 15px 20px;
+  font-size: 20px;
+  font-weight: 700;
+
+.well
+  inset()
+
 .center
   text-align: center
 
@@ -24,6 +37,9 @@ body
 .header
   margin-top: 1em
   margin-bottom: 40px
+  h1
+    font-size: 60px;
+    line-height: 120px;
   .description
     font-size: 20px
     margin-bottom: 20px
@@ -33,16 +49,64 @@ body
 #index
   text-align: left
   margin-bottom: 40px
-  .face
-    max-width: 120px
-    max-height: 120px
-    margin: 20px
-    shadow(#333)
+  .shadow
+    display: block;
+    position: relative;
+    max-width: 120px;
+    max-height: 120px;
+    margin: 20px auto;
+    //shadow(#333)
+    &:before
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      inset();
+      border-radius(50%);
+    
+
+.meetings
+    background: #FFF url(/images/map-coffee-bean.jpg) no-repeat;
+    overflow: hidden;
+    position: relative;
+    height : 440px;
+
+    div
+      position: absolute;
+
+    .map-mock
+      margin: 0;
+      top: 0;
+      left: 0;
+      a
+        display: block;
+        height: 420px;
+        width: 100%;
+
+    .details
+      top: 1px;
+      right: 1px;
+      padding: 20px;
+      height : 377px;
+      overflow: hidden;
+      background: rgba(255,255,255,.8);
+
+    .join-us
+      top: 440px;
+      left: 0;
 
 
 @media(max-width: 980px)
 
   #index
+
+    .meetings
+      .details
+        max-width : 50%;
+      .join-us
+        top: 430px;
+        background: rgba(255,255,255,.8);
+    
 
     .persons
         margin: 0 auto;
@@ -51,15 +115,10 @@ body
           width: 28%
           margin: 0 2%;
           float: left;
-
-        .face
-          max-width: 100%;
+        .shadow
           margin: 10px 0;
+          .face
+            max-width: 100%;
 
-.map 
-  display: block;
-  overflow: hidden;
-  width: 460px;
-  border: 1px solid #CCC;
-  background: #FFF url(/images/map-coffee-bean.jpg) no-repeat;
-  height: 410px;
+
+  

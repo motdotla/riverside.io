@@ -2,11 +2,10 @@ extends layout
 
 block content
   #index
-    .row
-      .span5
-        a.map(href="https://maps.google.com/maps?q=coffee+bean,+riverside,+ca&hl=en&ll=33.982358,-117.373885&spn=0.004668,0.005284&sll=34.079522,-118.265&sspn=0.210996,0.338173&t=h&hq=coffee+bean,&hnear=Riverside,+California&fll=33.982358,-117.373885&fspn=0.004668,0.005284&z=18")
-        //- img(src="/images/map-coffee-bean.jpg")
-      .span3
+    .row.meetings.well
+      .span5.map-mock
+        a(href="https://maps.google.com/maps?q=coffee+bean,+riverside,+ca&hl=en&ll=33.982358,-117.373885&spn=0.004668,0.005284&sll=34.079522,-118.265&sspn=0.210996,0.338173&t=h&hq=coffee+bean,&hnear=Riverside,+California&fll=33.982358,-117.373885&fspn=0.004668,0.005284&z=18")
+      .span3.details
         h3 We meet at 12pm every Friday to co-work and plan our co-working space.
         hr
         h4 Location: Coffee Bean
@@ -17,7 +16,7 @@ block content
         p 12:00pm every Friday
         p
           img(src="/images/meeting-team.jpg")
-      .span8
+      .span8.join-us
         p.center Join us for our weekly meeting and share your ideas to help shape and form Riverside’s first co-working space.
 
     hr
@@ -25,19 +24,22 @@ block content
     .row.persons
       .span2.person
         .center
-          img.face.roundify(src="/images/ben.jpg")
+          a.shadow
+            img.face.roundify(src="/images/ben.jpg")
         h4 Benjamin Mueller
         p Benjamin believes in <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL</a> software. He is a co-organizer of <a href="http://www.meetup.com/inlandempirewp/">Inland Empire WordPress</a>. His favorite languages are PHP and JavaScript. He's learning Mongo and Node.js.
       .span1.hidden-tablet.hidden-phone &nbsp;
       .span2.person
         .center
-          img.face.roundify(src="/images/jacob.jpg")
+          a.shadow
+            img.face.roundify(src="/images/jacob.jpg")
         h4 Jacob Lowe
         p <a href="http://jacoblowe.me">Jacob Lowe</a> is passionate about the web and loves to push the bar with JavaScript. He helps organize <a href="http://riversidejs.org">Riverside.js</a>. He is also a proud linux user.
       .span1.hidden-tablet.hidden-phone &nbsp;
       .span2.person
         .center
-          img.face.roundify(src="/images/scott.jpg")
+          a.shadow
+            img.face.roundify(src="/images/scott.jpg")
         h4 Scott Motte
         p 
           <a href="http://scottmotte.com">Scott</a> is founder of <a href="http://signature.io">Signature.io</a>. He also consults as a software engineer for startups around Southern California. He likes to code in Ruby and JavaScript.
@@ -45,12 +47,14 @@ block content
     .row.persons
       .span2.person
         .center
-          img.face.roundify(src="/images/gary.jpg")
+          a.shadow
+            img.face.roundify(src="/images/gary.jpg")
         h4 Gary Gossett
         p Gary is an iOS Enterprise developer. He is known for creating a new iPhone app every 2 months. He also enjoys coding in Html5 and CSS.
       .span1.hidden-tablet.hidden-phone &nbsp;
       .span2.person
         .center
-          img.face.roundify(src="/images/no-name.jpg")
+          a.shadow
+            img.face.roundify(src="/images/no-name.jpg")
         h4 Your Name Here
         p We are looking for more people to join us on this quest to start a co-working space in Riverside. That should be you.
