@@ -23,6 +23,8 @@ app.configure ->
 app.configure "development", ->
   app.use express.errorHandler()
 
+app.locals.members = members 
+
 app.get "/", routes.index
 
 app.get "/locations", routes.locations

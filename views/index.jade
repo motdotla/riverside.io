@@ -22,38 +22,12 @@ block content
     hr
     h2.center Who we are
     .row.persons
-      .span2.person
-        .center
-          a.shadow
-            img.face.roundify(src="/images/ben.jpg")
-        h4 Benjamin Mueller
-        p Benjamin believes in <a href="http://en.wikipedia.org/wiki/GNU_General_Public_License">GPL</a> software. He is a co-organizer of <a href="http://www.meetup.com/inlandempirewp/">Inland Empire WordPress</a>. His favorite languages are PHP and JavaScript. He's learning Mongo and Node.js.
-      .span1.hidden-tablet.hidden-phone &nbsp;
-      .span2.person
-        .center
-          a.shadow
-            img.face.roundify(src="/images/jacob.jpg")
-        h4 Jacob Lowe
-        p <a href="http://jacoblowe.me">Jacob Lowe</a> is passionate about the web and loves to push the bar with JavaScript. He helps organize <a href="http://riversidejs.org">Riverside.js</a>. He is also a proud linux user.
-      .span1.hidden-tablet.hidden-phone &nbsp;
-      .span2.person
-        .center
-          a.shadow
-            img.face.roundify(src="/images/scott.jpg")
-        h4 Scott Motte
-        p <a href="http://scottmotte.com">Scott</a> is founder of <a href="http://signature.io">Signature.io</a>. He also consults as a software engineer for startups around Southern California. He likes to code in Ruby and JavaScript.
-
-    .row.persons
-      .span2.person
-        .center
-          a.shadow
-            img.face.roundify(src="/images/gary.jpg")
-        h4 Gary Gossett
-        p Gary is an iOS Enterprise developer. He is known for creating a new iPhone app every 2 months. He also enjoys coding in Html5 and CSS.
-      .span1.hidden-tablet.hidden-phone &nbsp;
-      .span2.person
-        .center
-          a.shadow
-            img.face.roundify(src="/images/no-name.jpg")
-        h4 Your Name Here
-        p We are looking for more people to join us on this quest to start a co-working space in Riverside. That should be you.
+      - members.people.forEach(function(person){
+        .span2.person
+          .center
+            a.shadow
+              img.face.roundify(src=person.avatar)
+          h4= person.name
+          p!= person.description
+        .span1.hidden-tablet.hidden-phone.person-spacer &nbsp;
+      - })
