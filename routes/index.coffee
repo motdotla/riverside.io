@@ -9,3 +9,4 @@ exports.index = (req, res) ->
 exports.locations = (req, res) ->
   res.render "locations",
     title: "Locations"
+    members : members.persons

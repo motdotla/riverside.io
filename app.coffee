@@ -2,6 +2,7 @@
 Module dependencies.
 ###
 express = require("express")
+members = require("./members.json")
 routes = require("./routes")
 http = require("http")
 path = require("path")
