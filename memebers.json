@@ -1,0 +1,29 @@
+{
+	"members" : [
+		{
+			"name" 		: "Benjamin Mueller",
+			"avatar" 	: "/images/ben.jpg",
+			"desc" 		: "Benjamin believes in <a href=\"http://en.wikipedia.org/wiki/GNU_General_Public_License\">GPL</a> software. He is a co-organizer of <a href=\"http://www.meetup.com/inlandempirewp/\">Inland Empire WordPress</a>. His favorite languages are PHP and JavaScript. He's learning Mongo and Node.js." 
+		},
+		{
+			"name" 		: "Jacob Lowe",
+			"avatar" 	: "/images/jacob.jpg",
+			"desc" 		: "<a href=\"http://jacoblowe.me\">Jacob Lowe</a> is passionate about the web and loves to push the bar with JavaScript. He helps organize <a href=\"http://riversidejs.org\">Riverside.js</a>. He is also a proud linux user." 
+		},
+		{
+			"name" 		: "Scott Motte",
+			"avatar" 	: "/images/scott.jpg",
+			"desc" 		: "<a href=\"http://scottmotte.com\">Scott</a> is founder of <a href=\"http://signature.io\">Signature.io</a>. He also consults as a software engineer for startups around Southern California. He likes to code in Ruby and JavaScript." 
+		},
+		{
+			"name" 		: "Gary Gossett",
+			"avatar" 	: "/images/gary.jpg",
+			"desc" 		: "Gary is an iOS Enterprise developer. He is known for creating a new iPhone app every 2 months. He also enjoys coding in Html5 and CSS." 
+		},
+		{
+			"name" 		: "Your Name Here",
+			"avatar" 	: "/images/no-name.jpg",
+			"desc" 		: "We are looking for more people to join us on this quest to start a co-working space in Riverside. That should be you." 
+		},
+	]
+}
