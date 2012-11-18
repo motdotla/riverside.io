@@ -21,20 +21,7 @@ block content
         p.center Join us for our weekly meeting and share your ideas to help shape and form Riverside’s first coworking space.
 
     hr
-    h2.center Who we are
-    .row.persons
-      - members.people.forEach(function(person){
-        .span2.person
-          .center
-            a.shadow
-              img.face.roundify(src=person.avatar)
-          h4= person.name
-          p!= person.description
-        .span1.hidden-tablet.hidden-phone.person-spacer &nbsp;
-      - })
-
-    hr
-    h2.center Things we like.
+    h2.center Things We Like
 
     .row
       .span6
@@ -43,11 +30,28 @@ block content
         h4 <a href="http://startupweekend.org">Startup Weekend</a>
         p We've competed in <a href="http://startupweekend.org">StartupWeekend</a>s in Southern California. They are excellent events.
     .row
-      .span4
-        <iframe width="100%" height="400" src="http://www.youtube.com/embed/4AeWE6BLi_U?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
-      .span4
-        <iframe src="http://player.vimeo.com/video/44585865" width="100%" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      .span6
+        <iframe src="http://player.vimeo.com/video/38101676?color=00c4ff" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      .span2
+        h4 The Most Astounding Fact
+        p Astrophysicist <a href="http://en.wikipedia.org/wiki/Neil_deGrasse_Tyson">Dr. Neil DeGrasse Tyson</a> speaks to Connectivity as the most astounding fact.
+    .row
+      .span6
+        <iframe src="http://player.vimeo.com/video/21837974?badge=0&amp;color=ffffff" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      .span2
+        h4 <a href="http://betahaus.de/">betahaus</a>
+        p <a href="http://betahaus.de/">betahaus</a> is Berlin's coworking space. They have a large space, a coffee shop inside the coworking space, and events every week.
+    //- .row
+    //-   .span4
+    //-     <iframe width="100%" height="400" src="http://www.youtube.com/embed/4AeWE6BLi_U?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+    //-   .span4
+    //-     <iframe src="http://player.vimeo.com/video/44585865" width="100%" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
+
+    //- <iframe src="http://player.vimeo.com/video/8435403?badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/8435403">co.up coworking space documentary</a> from <a href="http://vimeo.com/langalex">Alexander Lang</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+    //- <iframe src="http://player.vimeo.com/video/23303079?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/23303079">Studiomates</a> from <a href="http://vimeo.com/desktimeapp">Desktime</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+    //- <iframe src="http://player.vimeo.com/video/28636306?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/28636306">Welcome to the future of work</a> from <a href="http://vimeo.com/grindspaces">Grind</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+    //- <iframe src="http://player.vimeo.com/video/36851507?portrait=0&amp;badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/36851507">Coworking</a> from <a href="http://vimeo.com/lejeunevideo">Le Jeune Vid&eacute;o</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
     //- br
     //- .row
     //-   .span5
@@ -65,3 +69,16 @@ block content
     //-   .span3
     //-     h4 <a href="http://riversidejs.org" target="_blank">Riverside JS</a>
     //-     p We are key members of <a href="http://riversidejs.org" target="_blank">RiversideJS</a>. RiversideJS hosts meetings to teach others about programming in JavaScript.
+
+    hr
+    h2.center Who we are
+    .row.persons
+      - members.people.forEach(function(person){
+        .span2.person
+          .center
+            a.shadow
+              img.face.roundify(src=person.avatar)
+          h4= person.name
+          p!= person.description
+        .span1.hidden-tablet.hidden-phone.person-spacer &nbsp;
+      - })
