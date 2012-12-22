@@ -12,6 +12,7 @@
     "coffee-script"     : "latest",
     "express"           : "3.0.0rc4",
     "jade"              : "*",
-    "stylus"            : "latest"
+    "stylus"            : "latest",
+    "mailchimp"		: "latest"
   }
 }
