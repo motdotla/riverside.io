@@ -1,3 +1,8 @@
+//import animations
+
+@import('animations.styl')
+
+
 // Mixins
 border-radius(n)
   -webkit-border-radius n
@@ -14,21 +19,9 @@ shadow(color)
   -webkit-box-shadow: 0px 1px 1px 0px color
   box-shadow:         0px 1px 1px 0px color
 
-transition(p, t)
-  -webkit-transition  p t
-  -moz-transition     p t
-  -ms-transition      p t
-  -o-transition       p t
-  transition          p t
-
-@-webkit-keyframes fade-in
-  0%    { opacity: 0; }
-  50%   { opacity: 0; }
-  100%  { opacity: 1; }
-
 body
-  -webkit-animation-name: fade-in;
-  -webkit-animation-duration: 1.5s;
+  animation-name(fade-in)
+  animation-duration(1.5s)
 
 //notification
 
@@ -39,11 +32,13 @@ body
   right 0
   text-align center
   margin 0 auto
-  -webkit-transform rotate(20deg)
+  transform(rotate(50deg))
+  transform-origin(100% 50% 0)
   transition(all, 1s)
   
   &.show
-    -webkit-transform translate(0, 120px) rotate(0deg)
+    transform(translate(0, 120px) rotate(0deg))
+
 
   span
     font-size: 15px;
@@ -52,6 +47,16 @@ body
     border: 1px solid #F0C36D;
     border-radius(20px)
     shadow(rgba(0,0,0,.3))
+
+// errors
+
+input[type=text]
+
+  &.error
+    border 1px solid #DA4F49
+    animation-duration(.5s)
+    animation-name(pulse)
+    animation-iteration-count(infinite)
 
 
 
@@ -99,12 +104,8 @@ body
   input[type=text]
     font-size 20px
     padding 15px 20px
-    margin-bottom 0
-    border-radius(4px 0 0 4px)
     line-height 2em
-  .btn-join-mailing
-    margin-top 2px
-    border-radius(0 4px 4px 0)
+
 
 .header
   img

@@ -24,10 +24,11 @@ block sign-up
             h2 Join our mailing list
             form.email-form(method="POST", action="/subscribe")
               p Receive weekly progress updates on creating a coworking space in Riverside.
-              input(type="text", name="email", placeholder="Email Address")
-              input.btn.btn-danger.btn-large.btn-join-mailing(type="submit", name="submit", onClick="_gaq.push(['_trackEvent', 'Buttons', 'Subscribe', 'Join Mailing List']);", value="Join")
+              div.input-append
+                input(type="text", name="email", placeholder="Email Address")
+                input.btn.btn-danger.btn-large.btn-join-mailing(type="submit", name="submit", value="Join")
             h2 Get Involved
-            a.btn.btn-info.btn-large.btn-join-mailing(href="/pdfs/pitch-deck.pdf", onClick="_gaq.push(['_trackEvent', 'Buttons', 'Download', 'Download Pitch Deck']);") Download Pitch Deck
+            a.btn.btn-info.btn-large.btn-join-mailing(href="/pdfs/pitch-deck.pdf") Download Pitch Deck
             br
             br
             p Put it on your phone or tablet device. Show it to others to get them involved!

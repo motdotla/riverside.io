@@ -12,6 +12,16 @@
 		setTimeout(function(){
 			ele.removeClass('show');
 		},5000);
+	},
+
+	loading = {
+		ele : $('.loading'),
+		show : function(){
+			loading.ele.addClass('show');
+		},
+		hide : function(){
+			loading.ele.addClass('show');
+		}
 	};
 
 
@@ -20,7 +30,7 @@
 			inputs 	= form.find('input'),
 			method 	= form.attr('method'),
 			submit 	= form.find('input[type=submit]'),
-			url 	= form.attr('action')
+			url 	= form.attr('action'),
 			compile = function(callback){
 				var obj = {};
 				inputs.each(function(){
@@ -56,16 +66,44 @@
 		});
 	};
 
-	$('.email-form').form(function(res){
+	var form = $('.email-form');
+
+	form.form(function(res){
+		var that = form;
+			that.find('input').removeClass('error').unbind('keypress');
 		if(res.success){
-			notification('You have successfully subscribed to the mailing list');
+			notification('Thanks! We are sending you an email to confirm your subscription');
+			_gaq.push(['_trackEvent', 'Mailing List', 'Subscribe', 'Invalid Email']);
+			that.find('input[type=text]').val('');
 		}else{
-			notification('ooops there is was an error we are redirecting you to a better signup page');
-			//window.location = 'signuppage';
+			if(typeof res.error === 'object'){
+				var ele = that.find('input[name="' + res.error[0] + '"]');
+				notification('Looks like the email you provided is invalid, please revise');
+				_gaq.push(['_trackEvent', 'Mailing List', 'Error', 'Invalid Email']);
+				ele.addClass('error');
+				ele.bind('keypress', function(){
+					ele.removeClass('error');
+				})
+			}else{
+				notification('Something went wrong; we are redirecting you to a better signup page');
+				_gaq.push(['_trackEvent', 'Mailing List', 'Error', '500 Error']);
+				setTimeout(function(){
+					window.location = res.redirect
+				}, 3000)
+			}
+			
 		}
 
 	});
 
+
+	// Inject trackin into each link
+
+	$('a').bind('click', function(){
+
+		_gaq.push(['_trackEvent', 'Link Click', this.href , $(this).text()]);
+
+	});
 
 
 }(jQuery))

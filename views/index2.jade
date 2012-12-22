@@ -15,47 +15,47 @@ block header
     .clearfix
 
 block sign-up
-  .list-item.sign-up
+  .list-item.members
     .container
         .row
-          .span2 &nbsp;
-          .span8
-            <iframe width="100%" height="400" src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded&amp;theme=light" frameborder="0" allowfullscreen></iframe>
-          .span2 &nbsp;
+          .span6
+            iframe(width="100%", height="400", src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded&theme=dark", frameborder="0", allowfullscreen)
           .span6.center
             h2 Join our mailing list
             form.email-form(method="POST", action="/subscribe")
+              p Receive weekly progress updates on creating a coworking space in Riverside.
               div.input-append
                 input(type="text", name="email", placeholder="Email Address")
                 input.btn.btn-danger.btn-large.btn-join-mailing(type="submit", name="submit", value="Join")
-            p Receive weekly progress updates on creating a coworking space in Riverside.
-          .span6.center
-            h2 Get Involved Today
+            h2 Get Involved
             a.btn.btn-info.btn-large.btn-join-mailing(href="/pdfs/pitch-deck.pdf") Download Pitch Deck
             br
             br
             p Put it on your phone or tablet device. Show it to others to get them involved!
 
+
 block content
   .list-item
     .container
       .row
+        .span12
+          h2 Meet with us
         .span5.center
           a(href="https://maps.google.com/maps?q=coffee+bean,+riverside,+ca&hl=en&ll=33.982358,-117.373885&spn=0.004668,0.005284&sll=34.079522,-118.265&sspn=0.210996,0.338173&t=h&hq=coffee+bean,&hnear=Riverside,+California&fll=33.982358,-117.373885&fspn=0.004668,0.005284&z=18")
             img(src="/images/map-coffee-bean.jpg")
         .span7.details.center
           h4 We meet at 12pm every Friday to co-work and plan our coworking space.
           br
-        .span4.details.center
+        .span3.center
+          p
+            img(src="/images/meeting-team.jpg")
+        .span4.details
           h4 Location: Coffee Bean
           p
             a(href="https://maps.google.com/maps?q=coffee+bean,+riverside,+ca&hl=en&ll=33.982358,-117.373885&spn=0.004668,0.005284&sll=34.079522,-118.265&sspn=0.210996,0.338173&t=h&hq=coffee+bean,&hnear=Riverside,+California&fll=33.982358,-117.373885&fspn=0.004668,0.005284&z=18") 3712 Mission Inn Ave, Riverside, CA 92501
 
           h4 Time and Date
           p 12:00pm every Friday
-        .span3.center
-          p
-            img(src="/images/meeting-team.jpg")
         .span7.join-us.center
           br 
           br
@@ -65,7 +65,7 @@ block content
     .container
         .row
           .span12
-            h2.center Things We Like
+            h2 Things We Like
           .span6.center
             <iframe src="http://player.vimeo.com/video/32424882?title=0&amp;byline=0&amp;portrait=0" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             h4 <a href="http://startupweekend.org">Startup Weekend</a>
@@ -80,11 +80,11 @@ block content
             h4 <a href="http://betahaus.de/">betahaus</a>
             p <a href="http://betahaus.de/">betahaus</a> is Berlin's coworking space. They have a large space, a coffee shop inside the coworking space, and events every week.
           .span3 &nbsp;
-          
+
   .list-item.members
     .container
       .span12
-        h2.center Who we are
+        h2 Who we are
         .row.persons
           - members.people.forEach(function(person){
             .span2.person
