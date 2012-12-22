@@ -45,20 +45,33 @@ app.get "/", routes.index
 app.get "/locations", routes.locations
 
 app.post "/subscribe", (req, res) ->
-  email = req.query.email;
+  email = req.body.email
 
-  if(api)
-    #need to add in list id
-    api.listSubscribe({id: '', email: email}, function(err, _res){
-      if(err)
-        res.json(err);
-      else
-        res.json(_res);
+  console.log email
 
-    })
-  else
-    #shot to mailchimp sign up page
-    res.redirect('')
+  #TESTING
+
+  res.json
+    success: true
+    email : email
+
+  # if(api)
+
+  #   api.listSubscribe
+  #     id: "" #add list id here
+  #     email: email, 
+  #     (err, _res) ->
+  #       if err
+  #         res.json 
+  #           success : false
+  #           error   : err
+  #       else
+  #          res.json 
+  #           sucess    : true
+  #           response  : _res
+  # else
+  #   #shoOt to mailchimp sign up page
+  #   res.redirect 'http://riverside.us5.list-manage2.com/subscribe?u=0b634d613f02dd256ad0d7317&id=27ea75d96b'
 
 http.createServer(app).listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")

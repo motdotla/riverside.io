@@ -14,6 +14,13 @@ shadow(color)
   -webkit-box-shadow: 0px 1px 1px 0px color
   box-shadow:         0px 1px 1px 0px color
 
+transition(p, t)
+  -webkit-transition  p t
+  -moz-transition     p t
+  -ms-transition      p t
+  -o-transition       p t
+  transition          p t
+
 @-webkit-keyframes fade-in
   0%    { opacity: 0; }
   50%   { opacity: 0; }
@@ -22,6 +29,31 @@ shadow(color)
 body
   -webkit-animation-name: fade-in;
   -webkit-animation-duration: 1.5s;
+
+//notification
+
+.notification
+  position fixed
+  top -100px
+  left 0
+  right 0
+  text-align center
+  margin 0 auto
+  -webkit-transform rotate(20deg)
+  transition(all, 1s)
+  
+  &.show
+    -webkit-transform translate(0, 120px) rotate(0deg)
+
+  span
+    font-size: 15px;
+    padding: 8px 16px;
+    background: #F9EDBE;
+    border: 1px solid #F0C36D;
+    border-radius(20px)
+    shadow(rgba(0,0,0,.3))
+
+
 
 // Style
 body

@@ -4,11 +4,20 @@
 
 (function($){
 
+	var notification = function(str){
+		var ele = $('.notification');
+
+		ele.html('<span>' + str + '</span>').addClass('show');
+
+		setTimeout(function(){
+			ele.removeClass('show');
+		},5000);
+	};
 
 
-	var sendForm = function(form){
-
-		var inputs 	= form.find('input'),
+	$.fn.form = function(response){
+		var form 	= $(this),
+			inputs 	= form.find('input'),
 			method 	= form.attr('method'),
 			submit 	= form.find('input[type=submit]'),
 			url 	= form.attr('action')
@@ -27,26 +36,35 @@
 			send = function(data, callback){
 				$.ajax({
 					url 	: url,
-					method 	: method,
+					type 	: method,
 					data 	: data,
 					success : function(res){
 						callback(res);
 					}
 				});
 			};
-		console.log(submit);
 
 		submit.click(function(e){
 			compile(function(res){
 				send(res, function(_res){
-					console.log(res);
+
+					response(_res);
+					
 				});
 			});
 			return false;
 		});
 	};
 
-	sendForm($('.email-form'));
+	$('.email-form').form(function(res){
+		if(res.success){
+			notification('You have successfully subscribed to the mailing list');
+		}else{
+			notification('ooops there is was an error we are redirecting you to a better signup page');
+			//window.location = 'signuppage';
+		}
+
+	});
 
 
 

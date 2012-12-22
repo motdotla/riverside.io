@@ -22,9 +22,8 @@ block sign-up
             iframe(width="100%", height="400", src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded&theme=light", frameborder="0", allowfullscreen)
           .span6.center
             h2 Join our mailing list
-            form.email-form(method="POST", action="http://riverside.us5.list-manage.com/subscribe/post")
+            form.email-form(method="POST", action="/subscribe")
               p Receive weekly progress updates on creating a coworking space in Riverside.
-              input(type="hidden", name="u", value="0b634d613f02dd256ad0d7317")
               input(type="text", name="email", placeholder="Email Address")
               input.btn.btn-danger.btn-large.btn-join-mailing(type="submit", name="submit", onClick="_gaq.push(['_trackEvent', 'Buttons', 'Subscribe', 'Join Mailing List']);", value="Join")
             h2 Get Involved
