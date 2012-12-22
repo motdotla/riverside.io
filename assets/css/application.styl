@@ -29,6 +29,24 @@ body
   font-weight: 300
   background: #fff url(/images/patterns/subtle_dots.png)
 
+
+.list-item
+  padding 20px 0
+  box-shadow inset 0px 0px 20px rgba(255,255,255,.5)
+  border-bottom 1px solid #ddd
+
+  &:nth-child(2n+1)
+    box-shadow inset 0px 0px 20px rgba(0,0,0,.1);
+
+  &.top-bar
+    background #fdfdfd
+
+  &.members
+    background #efefef
+
+.container
+  margin-bottom: 10px;
+
 .btn-join-mailing
   padding : 15px 20px;
   font-size: 20px;
@@ -40,12 +58,14 @@ body
 .center
   text-align: center
 
+
 .roundify
   border-radius(50%)
 
 .header
+  img
+    max-width 250px
   margin-top: 1em
-  margin-bottom: 40px
   h1
     font-size: 60px;
     line-height: 120px;
@@ -106,9 +126,21 @@ body
     .join-us
       top: 440px;
       left: 0;
+  .persons
+    .person
+      height: 350px;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
 
-@media(max-width: 980px)
+@media(max-width: 767px)
+
+  body
+    padding 0;
+
+    .container
+
+      padding 0 30px
 
   #index
 
@@ -120,17 +152,20 @@ body
         background: rgba(255,255,255,.8);
     
 
-    .persons
-        margin: 0 auto;
+  .persons
+    margin: 0 auto;
+    display: table;
+    .person
+      height: auto!important;
+      border-bottom: 1px solid #ddd;
+      &:first-child
+        border-top: 1px solid #ddd
+      .center
+        margin: 10px 30px 10px 0;
         display: table;
-      .person
-          width: 28%
-          margin: 0 2%;
-          float: left;
-        .shadow
-          margin: 10px 0;
-          .face
-            max-width: 100%;
+        float: left;
+        .face
+          max-width: 64px;
 
 
   

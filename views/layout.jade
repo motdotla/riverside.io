@@ -15,42 +15,18 @@ head
   // Le Styles 
   != css('application')
   
-  body
-    .container
-      .row
-        .span2 &nbsp;
-        .span8
-          .header.center
-            h1
-              span Riverside.io
-            .description We are a group of people actively growing a Coworking community in Riverside.
+body
+  block header
+  block sign-up
+  block content
 
-            hr
-            <iframe width="100%" height="400" src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+  script
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36543871-1']);
+    _gaq.push(['_trackPageview']);
 
-            .row
-              .span8
-                h2.center Get Involved Today
-                br
-              .span4
-                a.btn.btn-danger.btn-large.btn-join-mailing(href="http://eepurl.com/qZh-T") Join The Mailing List
-                p Receive weekly progress updates on creating a coworking space in Riverside.
-              .span4
-                a.btn.btn-info.btn-large.btn-join-mailing(href="/pdfs/pitch-deck.pdf") Download Pitch Deck
-                p Put it on your phone or tablet device. Show it to others to get them involved!
-      .row
-        .span2 &nbsp;
-        .span8
-          block content
-
-    script
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36543871-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
- 
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
