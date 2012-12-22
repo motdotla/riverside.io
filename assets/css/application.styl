@@ -33,16 +33,17 @@ body
 .list-item
   padding 20px 0
   box-shadow inset 0px 0px 20px rgba(255,255,255,.5)
-  border-bottom 1px solid #ddd
+  border-bottom 1px solid #d2d2d2
 
-  &:nth-child(2n+1)
+  &:nth-child(2n+2)
     box-shadow inset 0px 0px 20px rgba(0,0,0,.1);
-
-  &.top-bar
-    background #fdfdfd
 
   &.members
     background #efefef
+
+  &.sign-up
+    background #222
+    color #fff
 
 .container
   margin-bottom: 10px;
@@ -62,9 +63,21 @@ body
 .roundify
   border-radius(50%)
 
+.email-form
+  input[type=text]
+    font-size 20px
+    padding 15px 20px
+    margin-bottom 0
+    border-radius(4px 0 0 4px)
+    line-height 2em
+  .btn-join-mailing
+    margin-top 2px
+    border-radius(0 4px 4px 0)
+
 .header
   img
-    max-width 250px
+    max-width 150px
+    margin 0 10px 0 0
   margin-top: 1em
   h1
     font-size: 60px;
@@ -98,7 +111,6 @@ body
     
 
 .meetings
-    background: #FFF url(/images/map-coffee-bean.jpg) no-repeat;
     overflow: hidden;
     position: relative;
     height : 440px;
@@ -131,6 +143,8 @@ body
       height: 350px;
       overflow: hidden;
       text-overflow: ellipsis;
+      .face
+        max-width 100px
 
 
 @media(max-width: 767px)

@@ -15,101 +15,71 @@ block header
     .clearfix
 
 block sign-up
-  .list-item
+  .list-item.sign-up
     .container
         .row
           .span2 &nbsp;
           .span8
             <iframe width="100%" height="400" src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
-
-            .row
-              .span8
-                h2.center Get Involved Today
-                br
-              .span4.center
-                a.btn.btn-danger.btn-large.btn-join-mailing(href="http://eepurl.com/qZh-T", onClick="_gaq.push(['_trackEvent', 'Buttons', 'Subscribe', 'Join Mailing List']);") Join The Mailing List
-                p Receive weekly progress updates on creating a coworking space in Riverside.
-              .span4.center
-                a.btn.btn-info.btn-large.btn-join-mailing(href="/pdfs/pitch-deck.pdf", onClick="_gaq.push(['_trackEvent', 'Buttons', 'Download', 'Download Pitch Deck']);") Download Pitch Deck
-                p Put it on your phone or tablet device. Show it to others to get them involved!
+          .span2 &nbsp;
+          .span6.center
+            h2 Join our mailing list
+            form.email-form(method="post", action="")
+              input(type="text", name="email", placeholder="Email Address")
+              input.btn.btn-danger.btn-large.btn-join-mailing(type="submit", href="http://eepurl.com/qZh-T", onClick="_gaq.push(['_trackEvent', 'Buttons', 'Subscribe', 'Join Mailing List']);", value="Join")
+            p Receive weekly progress updates on creating a coworking space in Riverside.
+          .span6.center
+            h2 Get Involved Today
+            a.btn.btn-info.btn-large.btn-join-mailing(href="/pdfs/pitch-deck.pdf", onClick="_gaq.push(['_trackEvent', 'Buttons', 'Download', 'Download Pitch Deck']);") Download Pitch Deck
+            br
+            br
+            p Put it on your phone or tablet device. Show it to others to get them involved!
 
 block content
   .list-item
     .container
-      .span2 &nbsp;
-      .span8
-        #index
-          h2.center Come to our meetups
-          .row.meetings.well
-            .span5.map-mock
-              a(href="https://maps.google.com/maps?q=coffee+bean,+riverside,+ca&hl=en&ll=33.982358,-117.373885&spn=0.004668,0.005284&sll=34.079522,-118.265&sspn=0.210996,0.338173&t=h&hq=coffee+bean,&hnear=Riverside,+California&fll=33.982358,-117.373885&fspn=0.004668,0.005284&z=18")
-            .span3.details
-              h4 We meet at 12pm every Friday to co-work and plan our coworking space.
-              hr
-              h4 Location: Coffee Bean
-              p
-                a(href="https://maps.google.com/maps?q=coffee+bean,+riverside,+ca&hl=en&ll=33.982358,-117.373885&spn=0.004668,0.005284&sll=34.079522,-118.265&sspn=0.210996,0.338173&t=h&hq=coffee+bean,&hnear=Riverside,+California&fll=33.982358,-117.373885&fspn=0.004668,0.005284&z=18") 3712 Mission Inn Ave, Riverside, CA 92501
+      .row
+        .span5.center
+          a(href="https://maps.google.com/maps?q=coffee+bean,+riverside,+ca&hl=en&ll=33.982358,-117.373885&spn=0.004668,0.005284&sll=34.079522,-118.265&sspn=0.210996,0.338173&t=h&hq=coffee+bean,&hnear=Riverside,+California&fll=33.982358,-117.373885&fspn=0.004668,0.005284&z=18")
+            img(src="/images/map-coffee-bean.jpg")
+        .span7.details.center
+          h4 We meet at 12pm every Friday to co-work and plan our coworking space.
+          br
+        .span4.details.center
+          h4 Location: Coffee Bean
+          p
+            a(href="https://maps.google.com/maps?q=coffee+bean,+riverside,+ca&hl=en&ll=33.982358,-117.373885&spn=0.004668,0.005284&sll=34.079522,-118.265&sspn=0.210996,0.338173&t=h&hq=coffee+bean,&hnear=Riverside,+California&fll=33.982358,-117.373885&fspn=0.004668,0.005284&z=18") 3712 Mission Inn Ave, Riverside, CA 92501
 
-              h4 Time and Date
-              p 12:00pm every Friday
-              p
-                img(src="/images/meeting-team.jpg")
-            .span8.join-us
-              p.center Join us for our weekly meeting and share your ideas to help shape and form Riverside’s first coworking space.
+          h4 Time and Date
+          p 12:00pm every Friday
+        .span3.center
+          p
+            img(src="/images/meeting-team.jpg")
+        .span7.join-us.center
+          br 
+          br
+          p.center Join us for our weekly meeting and share your ideas to help shape and form Riverside’s first coworking space.
 
   .list-item
     .container
-      .span2 &nbsp;
-      .span8
-        h2.center Things We Like
-
         .row
-          .span6
+          .span12
+            h2.center Things We Like
+          .span6.center
             <iframe src="http://player.vimeo.com/video/32424882?title=0&amp;byline=0&amp;portrait=0" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-          .span2
             h4 <a href="http://startupweekend.org">Startup Weekend</a>
             p We've competed in <a href="http://startupweekend.org">StartupWeekend</a>s in Southern California. They are excellent events.
-        .row
-          .span6
+          .span6.center
             <iframe src="http://player.vimeo.com/video/38101676?color=00c4ff" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-          .span2
             h4 The Most Astounding Fact
             p Astrophysicist <a href="http://en.wikipedia.org/wiki/Neil_deGrasse_Tyson">Dr. Neil DeGrasse Tyson</a> speaks to Connectivity as the most astounding fact.
-        .row
-          .span6
+          .span3 &nbsp;
+          .span6.center
             <iframe src="http://player.vimeo.com/video/21837974?badge=0&amp;color=ffffff" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-          .span2
             h4 <a href="http://betahaus.de/">betahaus</a>
             p <a href="http://betahaus.de/">betahaus</a> is Berlin's coworking space. They have a large space, a coffee shop inside the coworking space, and events every week.
-        //- .row
-        //-   .span4
-        //-     <iframe width="100%" height="400" src="http://www.youtube.com/embed/4AeWE6BLi_U?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
-        //-   .span4
-        //-     <iframe src="http://player.vimeo.com/video/44585865" width="100%" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-
-
-        //- <iframe src="http://player.vimeo.com/video/8435403?badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/8435403">co.up coworking space documentary</a> from <a href="http://vimeo.com/langalex">Alexander Lang</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-        //- <iframe src="http://player.vimeo.com/video/23303079?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/23303079">Studiomates</a> from <a href="http://vimeo.com/desktimeapp">Desktime</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-        //- <iframe src="http://player.vimeo.com/video/28636306?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/28636306">Welcome to the future of work</a> from <a href="http://vimeo.com/grindspaces">Grind</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-        //- <iframe src="http://player.vimeo.com/video/36851507?portrait=0&amp;badge=0&amp;color=ffffff" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/36851507">Coworking</a> from <a href="http://vimeo.com/lejeunevideo">Le Jeune Vid&eacute;o</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-        //- br
-        //- .row
-        //-   .span5
-        //-     a(href="http://startupie.com", target="_blank")
-        //-       img(src="/images/startupie.jpg")
-        //-     br
-        //-   .span3
-        //-     h4 <a href="http://startupie.com" target="_blank">Startup IE</a>
-        //-     p We are key members of <a href="http://startupie.com" target="_blank">Startup IE</a>. Startup IE hosts events and talks for the burgeoning startup scene in Riverside and the surrounding Inland Empire.
-        //- br
-        //- .row
-        //-   .span5
-        //-     a(href="http://riversidejs.org", target="_blank")
-        //-       img(src="/images/riversidejs.jpg")
-        //-   .span3
-        //-     h4 <a href="http://riversidejs.org" target="_blank">Riverside JS</a>
-        //-     p We are key members of <a href="http://riversidejs.org" target="_blank">RiversideJS</a>. RiversideJS hosts meetings to teach others about programming in JavaScript.
-
+          .span3 &nbsp;
+          
   .list-item.members
     .container
       .span12
