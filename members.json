@@ -26,6 +26,11 @@
 			"description" 		: "Mike is the IT manager at University California Riverside. He is also the co-founder of <a href=\"http://startupie.com\">StartupIE</a> and enjoys programming in Objective C." 
 		},
 		{
+			"name"						: "Ralph Richardson",
+			"avatar"					: "/images/ralph.jpg",
+			"description"		: "Serial Entrepreneur. Founder & CEO of <a href=\"//www.maven20.com/\">Maven 2.0</a>. Currently building @hecklersports and @BermyArtist. Consulting for a few other cool start-ups."
+		},
+		{
 			"name" 						: "Your Name Here",
 			"avatar" 					: "/images/no-name.jpg",
 			"description" 		: "We are looking for more people to join us on this quest to start a coworking space in Riverside. That should be you." 

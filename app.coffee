@@ -10,27 +10,8 @@ MailChimpAPI = require('mailchimp').MailChimpAPI;
 
 apiKey = process.env.MAILCHIMPAPIKEY;
 LISTID = null
+ENVIROMENT = null
 #try mailchimp api
-
-try
-  api = new MailChimpAPI(apiKey,
-    version: "1.3"
-    secure: false
-  )
-catch error
-  console.log error.message
-
-#get mailinglist id
-
-api.lists (err, res) ->
-  if err
-    console.log err
-  else
-    # we only have one list for time being
-    console.log res.data[0].id
-    LISTID = res.data[0].id
-
-
 
 app = express()
 
@@ -48,6 +29,32 @@ app.configure ->
 
 app.configure "development", ->
   app.use express.errorHandler()
+  ENVIROMENT = "development"
+
+app.configure "production", ->
+  ENVIROMENT = "production"
+
+app.locals.ENV = ENVIROMENT
+
+if ENVIROMENT is "production"
+  try
+    api = new MailChimpAPI(apiKey,
+      version: "1.3"
+      secure: false
+    )
+  catch error
+    console.log error.message
+
+  #get mailinglist id
+
+  api.lists (err, res) ->
+    if err
+      console.log err
+    else
+      # we only have one list for time being
+      console.log res.data[0].id
+      LISTID = res.data[0].id
+
 
 app.locals.members = members 
 

@@ -1,0 +1,97 @@
+@-webkit-keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@-moz-keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@-ms-keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@-o-keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@-webkit-keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}@-moz-keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}@-ms-keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}@-o-keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}@-moz-keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@-webkit-keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@-o-keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@-ms-keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@keyframes fade-in{0%{opacity:0}
+50%{opacity:0}
+100%{opacity:1}
+}@-moz-keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}@-webkit-keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}@-o-keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}@-ms-keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}@keyframes pulse{0%{box-shadow:0 0 50px #da4f49}
+50%{box-shadow:0 0 0 #da4f49}
+100%{box-shadow:0 0 50px #da4f49}
+}body{-webkit-animation-name:fade-in;-moz-animation-name:fade-in;-ms-animation-name:fade-in;-o-animation-name:fade-in;animation-name:fade-in;-webkit-animation-duration:1.5s;-moz-animation-duration:1.5s;-ms-animation-duration:1.5s;-o-animation-duration:1.5s;animation-duration:1.5s}
+.notification{position:fixed;top:-100px;left:0;right:0;text-align:center;margin:0 auto;-webkit-transform:rotate(50deg);-moz-transform:rotate(50deg);-ms-transform:rotate(50deg);-o-transform:rotate(50deg);transform:rotate(50deg);-webkit-transform-origin:100% 50% 0;-moz-transform-origin:100% 50% 0;-ms-transform-origin:100% 50% 0;-o-transform-origin:100% 50% 0;transform-origin:100% 50% 0;-webkit-transition:all 1s;-moz-transition:all 1s;-ms-transition:all 1s;-o-transition:all 1s;transition:all 1s;}
+.notification.show{-webkit-transform:translate(0,120px) rotate(0);-moz-transform:translate(0,120px) rotate(0);-ms-transform:translate(0,120px) rotate(0);-o-transform:translate(0,120px) rotate(0);transform:translate(0,120px) rotate(0)}
+.notification span{font-size:15px;padding:8px 16px;background:#f9edbe;border:1px solid #f0c36d;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;-moz-box-shadow:0 1px 1px 0 rgba(0,0,0,0.3);-webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,0.3);box-shadow:0 1px 1px 0 rgba(0,0,0,0.3)}
+input[type=text].error{border:1px solid #da4f49;-webkit-animation-duration:.5s;-moz-animation-duration:.5s;-ms-animation-duration:.5s;-o-animation-duration:.5s;animation-duration:.5s;-webkit-animation-name:pulse;-moz-animation-name:pulse;-ms-animation-name:pulse;-o-animation-name:pulse;animation-name:pulse;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-ms-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;animation-iteration-count:infinite}
+body{font-family:"Open Sans";font-weight:300;background:#fff url("/images/patterns/subtle_dots.png")}
+.list-item{padding:20px 0;box-shadow:inset 0 0 20px rgba(255,255,255,0.5);border-bottom:1px solid #d2d2d2;}
+.list-item:nth-child(2n+2){box-shadow:inset 0 0 20px rgba(0,0,0,0.1)}
+.list-item.members{background:#efefef}
+.list-item.sign-up{background:#222;color:#fff}
+.container{margin-bottom:10px}
+.btn-join-mailing{padding:15px 20px;font-size:20px;font-weight:700}
+.well{-moz-box-shadow:0 1px 1px 0 rgba(255,255,255,0.8),inset 0 1px 1px 0 rgba(0,0,0,0.3);-webkit-box-shadow:0 1px 1px 0 rgba(255,255,255,0.8),inset 0 1px 1px 0 rgba(0,0,0,0.3);box-shadow:0 1px 1px 0 rgba(255,255,255,0.8),inset 0 1px 1px 0 rgba(0,0,0,0.3)}
+.center{text-align:center}
+.roundify{-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}
+.email-form input[type=text]{font-size:20px;padding:15px 20px;line-height:2em}
+.header{margin-top:1em;}
+.header img{max-width:150px;margin:0 10px 0 0}
+.header h1{font-size:60px;line-height:120px}
+.header .description{font-size:20px;margin-bottom:20px}
+.header img.logo{margin:20px}
+#index{text-align:left;margin-bottom:40px;}
+#index .shadow{display:block;position:relative;max-width:120px;max-height:120px;margin:20px auto;}
+#index .shadow:before{content:'';position:absolute;width:100%;height:100%;-moz-box-shadow:0 1px 1px 0 rgba(255,255,255,0.8),inset 0 1px 1px 0 rgba(0,0,0,0.3);-webkit-box-shadow:0 1px 1px 0 rgba(255,255,255,0.8),inset 0 1px 1px 0 rgba(0,0,0,0.3);box-shadow:0 1px 1px 0 rgba(255,255,255,0.8),inset 0 1px 1px 0 rgba(0,0,0,0.3);-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}
+#index .person-spacer:nth-child(3n+3){display:none}
+.meetings{overflow:hidden;position:relative;height:440px;}
+.meetings div{position:absolute}
+.meetings .map-mock{margin:0;top:0;left:0;}
+.meetings .map-mock a{display:block;height:420px;width:100%}
+.meetings .details{top:1px;right:1px;padding:20px;height:377px;overflow:hidden;background:rgba(255,255,255,0.8)}
+.meetings .join-us{top:440px;left:0}
+.persons .person{height:350px;overflow:hidden;text-overflow:ellipsis;}
+.persons .person .face{max-width:100px}
+@media (max-width: 767px){body{padding:0;}
+body .container{padding:0 30px}
+#index .meetings .details{max-width:50%}
+#index .meetings .join-us{top:430px;background:rgba(255,255,255,0.8)}
+.persons{margin:0 auto;display:table;}
+.persons .person{height:auto !important;border-bottom:1px solid #ddd;}
+.persons .person:first-child{border-top:1px solid #ddd}
+.persons .person .center{margin:10px 30px 10px 0;display:table;float:left;}
+.persons .person .center .face{max-width:64px}
+}
