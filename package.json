@@ -13,6 +13,7 @@
     "express"           : "3.0.0rc4",
     "jade"              : "*",
     "stylus"            : "latest",
-    "mailchimp"		: "latest"
+    "mailchimp"		      : "latest",
+    "request"           : "latest"
   }
 }

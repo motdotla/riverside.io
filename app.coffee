@@ -6,7 +6,9 @@ members = require("./members.json")
 routes = require("./routes")
 http = require("http")
 path = require("path")
-MailChimpAPI = require('mailchimp').MailChimpAPI;
+MailChimpAPI = require('mailchimp').MailChimpAPI
+Meetup = require("./meetup.js").Meetup
+group = new Meetup('Riverside-io-Coworking')
 
 apiKey = process.env.MAILCHIMPAPIKEY;
 LISTID = null
@@ -58,9 +60,26 @@ if ENVIROMENT is "production"
 
 app.locals.members = members 
 
-app.get "/", routes.index
+app.get "/", (req, res) ->
 
-app.get "/locations", routes.locations
+  group.getEvents 1, (events) ->
+
+    event = events[0]
+
+    if req.query.v is '2' 
+      res.render "index",
+        title   : "Riverside.io"
+        event   : event
+    else if req.query.v is '3'
+      res.render "index2",
+        title   : "Riverside.io"
+        event   : event
+    else
+      res.render "control",
+        title   : "Riverside.io"
+        event   : event
+
+
 
 app.post "/subscribe", (req, res) ->
   email = req.body.email

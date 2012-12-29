@@ -1,0 +1,23 @@
+.list-item.event(data-venue=JSON.stringify(event.venue))
+  .container
+    .row
+      .span12
+        h2 Meet with us
+      .span5.center.map
+      .span7
+        h2 Upcoming Meeting
+      .span3.center 
+        p
+          img(src="/images/meeting-team.jpg")
+      .span4.details
+        h4 Location 
+        h5= event.venue.name
+        a(href="https://maps.google.com/maps?q=#{event.venue.address_1}+#{event.venue.city},+#{event.venue.state}+#{event.venue.zip}")= event.venue.address_1
+          br
+          span= event.venue.city + ', ' + event.venue.state + ' ' + event.venue.zip
+        h4 Time and Date
+        p.time(data-time=event.time) fetching time...
+      .span7.join-us.center
+        br 
+        br
+        p.center Join us for our weekly meeting and share your ideas to help shape and form Riverside’s first coworking space.

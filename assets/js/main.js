@@ -1,3 +1,5 @@
+//= require event.js
+
 /*
  * Small Script to send Email to mailchimp
  */
