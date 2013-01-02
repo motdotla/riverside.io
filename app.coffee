@@ -79,7 +79,8 @@ app.get "/", (req, res) ->
         title   : "Riverside.io"
         event   : event
 
-
+app.get '/events/:id', (req, res) ->
+  res.redirect('http://meetup.com/Riverside-io-Coworking/events/' + req.params.id)
 
 app.post "/subscribe", (req, res) ->
   email = req.body.email

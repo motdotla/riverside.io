@@ -16,7 +16,8 @@
           br
           span= event.venue.city + ', ' + event.venue.state + ' ' + event.venue.zip
         h4 Time and Date
-        p.time(data-time=event.time) fetching time...
+        a(href=event.event_url)
+          p.time(data-time=event.time) fetching time...
       .span7.join-us.center
         br 
         br
