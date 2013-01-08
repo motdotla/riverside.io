@@ -79,6 +79,9 @@ app.get "/", (req, res) ->
         title   : "Riverside.io"
         event   : event
 
+app.get '/join', (req, res) ->
+  res.redirect('https://spacebox.io/s/nnxuOqQfSx')
+  
 app.get '/events/:id', (req, res) ->
   res.redirect('http://meetup.com/Riverside-io-Coworking/events/' + req.params.id)
 
