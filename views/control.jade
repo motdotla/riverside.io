@@ -4,7 +4,8 @@ block sign-up
   .list-item.sign-up
       .row
         .columns.eight.offset-by-two
-          iframe(width="100%", height="400", src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded&amp;theme=light&rel=0&wmode=transparent", frameborder="0", allowfullscreen)
+          .video-container
+            iframe(width="100%", height="400", src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded&amp;theme=light&rel=0&wmode=transparent", frameborder="0", allowfullscreen)
         form.email-form.columns.six.row.collapse.center(method="POST", action="/subscribe")
           h3 Join our mailing list
           .columns.eight.mobile-three
