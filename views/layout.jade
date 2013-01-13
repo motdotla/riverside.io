@@ -7,9 +7,6 @@ head
   meta(name='keywords', content="Coworking, Riverside, Co-working, co-working, Riverside.io, learn to code, events, coworking events, startupie, riversidejs, riverside.js, startup_ie, downtown Riverside, scarfs")
   meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.5")
   meta(name='author', content='Ben Mueller, Scott Motte, Jacob Lowe')
-
-  link(href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.1/css/bootstrap.min.css", rel="stylesheet")
-  link(href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.1/css/bootstrap-responsive.min.css", rel="stylesheet")
   link(href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin,latin-ext", rel="stylesheet")
 
   // Le Styles 
@@ -33,13 +30,15 @@ head
 
   
 body
-  block header
+  include header
   block sign-up
-  block content
+  include event
+  include welike
+  include members
   .list-item.footer
     .container
       .row
-        .span12.center
+        .columns.twelve.center
           p Riverside.io 2012
   .notification
     span &nsbp;

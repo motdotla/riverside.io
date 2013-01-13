@@ -1,7 +1,9 @@
 //import animations
-
+@import 'foundation.css'
 @import('animations.styl')
 
+.row
+  width 1280px
 
 // Mixins
 border-radius(n)
@@ -19,9 +21,15 @@ shadow(color)
   -webkit-box-shadow: 0px 1px 1px 0px color
   box-shadow:         0px 1px 1px 0px color
 
+filter(property)
+  -webkit-filter  property
+  -moz-filter     property
+  -ms-filter      property
+  -o-filter       property
+
 body
   animation-name(fade-in)
-  animation-duration(1.5s)
+  animation-duration(1s)
 
 //notification
 
@@ -66,7 +74,6 @@ body
   font-weight: 300
   background: #fff url(/images/patterns/subtle_dots.png)
 
-
 .list-item
   padding 20px 0
   box-shadow inset 0px 0px 20px rgba(255,255,255,.5)
@@ -81,14 +88,11 @@ body
   &.sign-up
     background #222
     color #fff
+    h3
+      color #ddd
 
 .container
   margin-bottom: 10px;
-
-.btn-join-mailing
-  padding : 15px 20px;
-  font-size: 20px;
-  font-weight: 700;
 
 .well
   inset()
@@ -102,9 +106,12 @@ body
 
 .email-form
   input[type=text]
-    font-size 20px
-    padding 15px 20px
-    line-height 2em
+    padding 13px 30px 15px
+    height auto
+  input[type=submit]
+    padding 15px 30px 16px
+    font-size 17px
+    height auto
 
 
 .header
@@ -138,9 +145,6 @@ body
       height:100%;
       inset();
       border-radius(50%);
-  .person-spacer:nth-child(3n+3)
-    display: none;
-
     
 
 .meetings
@@ -151,68 +155,48 @@ body
     div
       position: absolute;
 
-    .map-mock
-      margin: 0;
-      top: 0;
-      left: 0;
-      a
-        display: block;
-        height: 420px;
-        width: 100%;
+  .map-mock
+    margin: 0;
+    top: 0;
+    left: 0;
+    a
+      display: block;
+      height: 420px;
+      width: 100%;
 
-    .details
-      top: 1px;
-      right: 1px;
-      padding: 20px;
-      height : 377px;
-      overflow: hidden;
-      background: rgba(255,255,255,.8);
-
-    .join-us
-      top: 440px;
-      left: 0;
+  .columns.seven.mobile-two.center img
+      margin-top 10px
+      
   .persons
     .person
-      height: 350px;
-      text-overflow: ellipsis;
+      height: 360px;
       .face
         max-width 100px
         box-shadow: 0px 1px 1px #fff, 0px -1px 1px  rgba(0,0,0,.5) 
+        filter(contrast(100%))
+        transition(all, 1s)
+        &:hover
+          filter(contrast(200%))
 
 
 @media(max-width: 767px)
 
-  body
-    padding 0;
-
-    .container
-
-      padding 0 30px
-
   #index
-
     .meetings
-      .details
-        max-width : 50%;
       .join-us
         top: 430px;
         background: rgba(255,255,255,.8);
     
 
   .persons
-    margin: 0 auto;
-    display: table;
     .person
-      height: auto!important;
-      border-bottom: 1px solid #ddd;
+      height: auto!important
+      border-bottom: 1px solid #ddd
       &:first-child
         border-top: 1px solid #ddd
-      .center
-        margin: 10px 30px 10px 0;
-        display: table;
-        float: left;
-        .face
-          max-width: 64px;
+      .face
+        margin: 20px 0;
+        max-width: 64px;
 
 
   

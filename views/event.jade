@@ -1,15 +1,13 @@
 .list-item.event(data-venue=JSON.stringify(event.venue))
-  .container
-    .row
-      .span12
-        h2 Meet with us
-      .span5.center.map
-      .span7
-        h2 Upcoming Meeting
-      .span3.center 
+  .row
+    .columns.twelve
+      h2 Meet with us
+    .columns.six.center.map
+    .columns.six
+      .columns.seven.mobile-two.center 
         p
           img(src="/images/meeting-team.jpg")
-      .span4.details
+      .columns.five.mobile-two.details
         h4 Location 
         h5= event.venue.name
         a(href="https://maps.google.com/maps?q=#{event.venue.address_1}+#{event.venue.city},+#{event.venue.state}+#{event.venue.zip}")= event.venue.address_1
@@ -18,7 +16,7 @@
         h4 Time and Date
         a(href=event.event_url)
           p.time(data-time=event.time) fetching time...
-      .span7.join-us.center
+      .columns.twelve.join-us.center
         br 
         br
         p.center Join us for our weekly meeting and share your ideas to help shape and form Riverside’s first coworking space.

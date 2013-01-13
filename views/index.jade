@@ -1,72 +1,22 @@
 extends layout
 
-block header
-  .list-item.top-bar
-    .clearfix
-    .container
-      .row
-        .span2 &nbsp;
-        .span8
-          .header.center
-            h1
-              img(src="/images/riverside-io.svg")
-              span Riverside.io
-            .description We are a group of people actively growing a Coworking community in Riverside.
-    .clearfix
-
 block sign-up
   .list-item.sign-up
-    .container
-        .row
-          .span6
-            iframe(width="100%", height="400", src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded&theme=light", frameborder="0", allowfullscreen)
-          .span6.center
-            h2 Join our mailing list
-            form.email-form(method="POST", action="/subscribe")
+      .row
+        .columns.six
+          iframe(width="100%", height="400", src="http://www.youtube.com/embed/le0dfcG_jVw?feature=player_embedded&amp;theme=light&rel=0&wmode=transparent", frameborder="0", allowfullscreen)
+        .columns.six
+          form.email-form.twelve.six.row.collapse.center(method="POST", action="/subscribe")
+            h3 Join our mailing list
+            .columns.eight.mobile-three
+              input(type="text", name="email", placeholder="Email Address")
+            .columns.four.mobile-one
+              input.button.alert.btn-join-mailing.expand.postfix(type="submit", name="submit", value="Join")
+            .columns.twelve.mobile-four
               p Receive weekly progress updates on creating a coworking space in Riverside.
-              div.input-append
-                input(type="text", name="email", placeholder="Email Address")
-                input.btn.btn-danger.btn-large.btn-join-mailing(type="submit", name="submit", value="Join")
-            h2 Get Involved
-            a.btn.btn-info.btn-large.btn-join-mailing(href="/pdfs/pitch-deck.pdf") Download Pitch Deck
+          .columns.twelve.center
+            h3 Get Involved Today
+            a.button.large(href="/pdfs/pitch-deck.pdf") Download Pitch Deck
             br
             br
             p Put it on your phone or tablet device. Show it to others to get them involved!
-
-
-block content
-  include event
-  .list-item
-    .container
-        .row
-          .span12
-            h2 Things We Like
-          .span6.center
-            <iframe src="http://player.vimeo.com/video/32424882?title=0&amp;byline=0&amp;portrait=0" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            h4 <a href="http://startupweekend.org">Startup Weekend</a>
-            p We've competed in <a href="http://startupweekend.org">StartupWeekend</a>s in Southern California. They are excellent events.
-          .span6.center
-            <iframe src="http://player.vimeo.com/video/38101676?color=00c4ff" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            h4 The Most Astounding Fact
-            p Astrophysicist <a href="http://en.wikipedia.org/wiki/Neil_deGrasse_Tyson">Dr. Neil DeGrasse Tyson</a> speaks to Connectivity as the most astounding fact.
-          .span3 &nbsp;
-          .span6.center
-            <iframe src="http://player.vimeo.com/video/21837974?badge=0&amp;color=ffffff" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            h4 <a href="http://betahaus.de/">betahaus</a>
-            p <a href="http://betahaus.de/">betahaus</a> is Berlin's coworking space. They have a large space, a coffee shop inside the coworking space, and events every week.
-          .span3 &nbsp;
-
-  .list-item.members
-    .container
-      .span12
-        h2 Who we are
-        .row.persons
-          - members.people.forEach(function(person){
-            .span2.person
-              .center
-                a.shadow
-                  img.face.roundify(src=person.avatar)
-              h4= person.name
-              p!= person.description
-              .clearfix
-          - })

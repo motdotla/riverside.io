@@ -1,0 +1,13 @@
+.list-item.members
+    .row.persons
+      h2.center Who we are
+
+      - members.people.forEach(function(person){
+        .columns.three.person
+          .columns.twelve.mobile-one.center
+            a.shadow
+              img.face.roundify(src=person.avatar)
+          .columns.twelve.mobile-three
+            h4= person.name
+            p!= person.description
+      - })
