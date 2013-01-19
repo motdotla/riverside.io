@@ -1,0 +1,32 @@
+.gray_background
+  .wrapper.center
+    h2 A coworking space in Riverside.
+  .wrapper.clearfix
+    #video
+      #video_image
+        img(alt='video_place_holder', width='512px', height='385px', src='/images/video_placeholder.jpg')
+      #player.hidden(style='display: none;')
+        object(width='512', height='385')
+          param(name='movie', value='https://www.youtube.com/v/le0dfcG_jVw?autohide=1&showinfo=0&rel=0&autoplay=1')
+          param(name='allowFullScreen', value='true')
+          param(name='allowscriptaccess', value='always')
+          embed(src='https://www.youtube.com/v/le0dfcG_jVw?autohide=1&showinfo=0&rel=0&autoplay=1', type='application/x-shockwave-flash', width='512', height='385', allowscriptaccess='always', allowfullscreen='true')
+    #backing
+      ul
+        li#backers.stats
+          | 9
+          span members
+        li.stats
+          | $900
+          span of $2,000
+        li#days.stats
+          | 100
+          span  days left
+      #progress_bg.small
+        #progress(style='width: 45%;')
+      #reserve_container
+        p#ship_date Goal of 20 committed members!
+        a.blue_button.reserve(href='http://riverside.us5.list-manage2.com/subscribe?u=0b634d613f02dd256ad0d7317&id=27ea75d96b', onClick="_gaq.push(['_trackEvent', 'Mailing List', 'Subscribe', 'Join Mailing List']);") Join Mailing List
+        p#price Follow our quest!
+        p You'll get occasional updates on our quest to start a coworking space in Riverside.
+        .fb-like(data-send='false', data-width='70', data-layout='box_count', data-show-faces='true')

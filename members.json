@@ -18,7 +18,7 @@
 		{
 			"name" 						: "Gary Gossett",
 			"avatar" 					: "/images/gary.jpg",
-			"description" 		: "Gary is an iOS Enterprise developer. He is known for creating a new iPhone app every 2 months. He also enjoys coding in Html5 and CSS." 
+			"description" 		: "Gary is an iOS Enterprise developer. He is known for creating a new iPhone app every 2 months. He also enjoys coding in HTHML5 and CSS." 
 		},		
 		{
 			"name" 						: "Mike Kennedy",
@@ -28,12 +28,22 @@
 		{
 			"name"						: "Ralph Richardson",
 			"avatar"					: "/images/ralph.jpg",
-			"description"		: "Serial Entrepreneur. Founder & CEO of <a href=\"//www.maven20.com/\">Maven 2.0</a>. Currently building @hecklersports and @BermyArtist. Consulting for a few other cool start-ups."
+			"description"			: "Serial Entrepreneur. Founder & CEO of <a href=\"//www.maven20.com/\">Maven 2.0</a>. Currently building @hecklersports and @BermyArtist. Consulting for a few other cool start-ups."
 		},
 		{
-			"name" 						: "Your Name Here",
+			"name" 						: "Daniel Villarreal",
+			"avatar" 					: "/images/daniel.jpg",
+			"description" 		: "Daniel handles system operations & web development for UC Santa Bernardino. He likes to build and break stuff and knows his way around unix really well." 
+		},
+		{
+			"name" 						: "Victor Hill",
 			"avatar" 					: "/images/no-name.jpg",
-			"description" 		: "We are looking for more people to join us on this quest to start a coworking space in Riverside. That should be you." 
+			"description" 		: "Victor is the manager for all technical operations at UC Riverside. He is also active in organizing various technology events for students." 
+		},
+		{
+			"name" 						: "John Bowen",
+			"avatar" 					: "/images/john.jpg",
+			"description" 		: "John is a longtime programmer and developer of c/s database applications. He also organizes the <a href=\"http://www.meetup.com/Riverside-Raspberry\">Riverside Rasberry Pi</a> Meetup group." 
 		}
 	]
 }

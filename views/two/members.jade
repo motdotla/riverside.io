@@ -1,0 +1,12 @@
+.gray_background
+  .wrapper.clearfix
+    h4.center Who We Are
+  ul#other_points.wrapper.clearfix
+    each person, i in members.people
+      li(class=(i % 2 == 0 ? 'odd':'even'))
+        
+        h4
+          img.face.roundify(src=person.avatar)
+          = person.name
+        p
+          != person.description
