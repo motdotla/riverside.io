@@ -60,20 +60,9 @@ if ENVIROMENT is "production"
 app.locals.members = members 
 
 app.get "/", (req, res) ->
-
-  group.getEvents 1, (events) ->
-
-    event = events[0]
-
-    if req.query.v is '2' 
-      res.render "two",
-        title   : "Riverside.io"
-        event   : event
-    else
-      res.render "control",
-        title   : "Riverside.io"
-        event   : event
-
+  res.render "two",
+    title   : "Riverside.io"
+    
 app.get '/join', (req, res) ->
   res.redirect('https://spacebox.io/s/nnxuOqQfSx')
   
